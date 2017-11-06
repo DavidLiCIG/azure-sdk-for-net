@@ -9,7 +9,7 @@ using Xunit;
 
 namespace FaceSDK.Tests
 {
-    public class FaceDetectionTests : BaseTests
+    public class FaceDetectionTests : FaceBaseTests
     {
         [Fact]
         public void FaceDetection()
@@ -21,7 +21,7 @@ namespace FaceSDK.Tests
                 IFaceAPI client = GetClient(HttpMockServer.CreateInstance());
                 using (FileStream stream = new FileStream(Path.Combine("TestImages", "detection1.jpg"), FileMode.Open))
                 {
-                    IList<DetectedFace> faceList = client.Face.DetectInStream(stream);
+                    IList<DetectedFace> faceList = client.Face.DetectInStreamAsync(stream).Result;
                     Assert.Equal(1, faceList.Count);
                 }
             }

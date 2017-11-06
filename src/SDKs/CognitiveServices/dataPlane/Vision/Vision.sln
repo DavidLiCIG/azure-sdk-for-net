@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Azure.CognitiveServices.Vision", "Vision\Microsoft.Azure.CognitiveServices.Vision.csproj", "{6807B854-8528-4FEE-A25D-C43C3AA2D601}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Azure.CognitiveServices.Vision.Tests", "Vision.Tests\Microsoft.Azure.CognitiveServices.Vision.Tests.csproj", "{5987D97A-E532-450C-BF22-A1F595C927F1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6807B854-8528-4FEE-A25D-C43C3AA2D601} = {6807B854-8528-4FEE-A25D-C43C3AA2D601}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
